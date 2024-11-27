@@ -154,10 +154,9 @@ const App = () => {
                                             <p className='text-sm text-gray-400'>{task?.allTask?.description}</p>
                                         </div>
                                         <div className='flex mt-1 lg:m-0 md:m-0 items-center space-x-2'>
-                                            {
-                                                !task.completed &&
-                                                <button onClick={() => handleToggleComplete(task.id)} className={`px-2 py-1 bg-green-500/20 text-green-500 rounded-lg hover:bg-green-500/30 transition-colors duration-300`}><CircleCheck size={22} strokeWidth={3} /></button>
-                                            }
+
+                                            <button onClick={() => handleToggleComplete(task.id)} className={`px-2 py-1   ${task.completed ? ' text-gray-500 bg-gray-500/20 hover:bg-gray-500/30' : ' text-green-500 bg-green-500/20 hover:bg-green-500/30 transition-colors duration-300'}  rounded-lg `}><CircleCheck size={22} strokeWidth={3} /></button>
+
                                             <button onClick={() => openDeleteAlertDialog(true, task.id)} className='px-2 py-1 bg-red-500/20 text-red-500 rounded-lg hover:bg-red-500/30 transition-colors duration-300'><Trash size={22} strokeWidth={3} /></button>
                                         </div>
                                     </div>
