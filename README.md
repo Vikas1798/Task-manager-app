@@ -1,8 +1,24 @@
-# React + Vite
+# Task Manger App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
+- HTML/CSS
+- Tailwind,
+- JavaScript (ES6)
+- React + Vite
+- React Router Dom
+- Vercel for deployment
 
-Currently, two official plugins are available:
+### Installation:
+1. Clone the Repository
+    - git clone https://github.com/Vikas1798/Task-manager-app.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Navigate to the Cloned Repository
+    - cd your-repo-name
+
+3. Install Dependencies
+    - yarn
+
+4. Start the Project
+    - yarn dev
+
+### Live Demo
