@@ -1,7 +1,6 @@
 import React from "react";
 import { X } from 'lucide-react';
 
-
 const DialogComponent = ({ isOpen, onClose, size, children, header }) => {
     let customeSize;
     if (size === "xs") {

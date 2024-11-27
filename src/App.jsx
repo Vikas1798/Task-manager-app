@@ -6,7 +6,6 @@ import noTask from './Assets/no-data.svg';
 import waveImg from './Assets/wave.svg';
 
 const App = () => {
-
     const [state, setState] = useState({
         addTask: false,
         taskInput: {
@@ -129,6 +128,10 @@ const App = () => {
     let { title, description } = state.taskInput;
     return (
         <>
+            <svg width="20" height="20" fill="currentColor" className="animate-spin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                <path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z">
+                </path>
+            </svg>
             <AppWrapper>
                 <div className='flex items-center justify-center flex-col'>
                     <h1 className='text-4xl font-bold text-yellow-500 mt-20'>  Task manager app </h1>
@@ -167,7 +170,7 @@ const App = () => {
                             </div>
                     }
                 </div>
-            </AppWrapper >
+            </AppWrapper>
             <DialogComponent
                 isOpen={state?.addTask}
                 onClose={() => openNewTaskDialog(false)}
@@ -184,7 +187,6 @@ const App = () => {
                             <label className="block text-sm font-medium mb-2 text-[#FFFFFF]">Description</label>
                             <input required value={description} onChange={(e) => updateNewTask('description', e)} type="text" className='w-full bg-zinc-700 rounded-lg p-2 text-white border border-gray-600 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all duration-300' />
                         </div>
-
                         <div className="grid grid-cols-2 gap-3 w-[80%] mx-auto mt-5">
                             <button type="button" onClick={() => {
                                 setState((prev) => {
@@ -209,6 +211,7 @@ const App = () => {
                     </form>
                 </div>
             </DialogComponent>
+
             <DialogComponent
                 isOpen={state?.deleteAlert?.key}
                 onClose={() => openDeleteAlertDialog(false, "")}
@@ -217,8 +220,7 @@ const App = () => {
             >
                 <div className='w-full'>
                     <h5 className='text-[#FFFFFF]'>
-                        Are you sure you want to remove this task.
-
+                        Are you sure you want to remove this task ?
                     </h5>
                     <div className="grid grid-cols-2 gap-3 w-[80%] mx-auto mt-5">
                         <button onClick={() => openDeleteAlertDialog(false, "")} className="text-[#FFFFFF] px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors duration-300">
@@ -228,7 +230,6 @@ const App = () => {
                             Yes
                         </button>
                     </div>
-
                 </div>
             </DialogComponent>
         </>
