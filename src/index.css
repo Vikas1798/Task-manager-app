@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+body{
+  background-color: #09090b;
+}
+
+
+@keyframes modal-slide-up {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.modal-animate-slide-up {
+  animation: modal-slide-up 0.5s ease-out forwards;
+}
+
+.task-item{
+  transition: all 0.3s ease;
+}
