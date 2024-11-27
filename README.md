@@ -2,10 +2,9 @@
 
 ## Tech Stack
 - HTML/CSS
-- Tailwind,
+- Tailwind
 - JavaScript (ES6)
 - React + Vite
-- React Router Dom
 - Vercel for deployment
 
 ### Installation:
